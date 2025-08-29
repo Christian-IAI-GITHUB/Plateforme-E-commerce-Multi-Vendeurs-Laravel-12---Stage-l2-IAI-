@@ -1,0 +1,1 @@
+<img src="{{ asset('front/images/IDS-Logo-removebg-previewRedimensionner100-100.png') }}" alt="Logo IDS" class="h-10 w-auto">
