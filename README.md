@@ -1,66 +1,157 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IDSeMarket - Plateforme E-commerce Laravel 12
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📋 Description
 
-## About Laravel
+IDSeMarket est une plateforme e-commerce moderne développée avec Laravel 12, offrant une solution complète pour la vente en ligne avec gestion des vendeurs et des clients.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fonctionnalités
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🛍️ Front-end
+- **Catalogue de produits** avec filtres avancés
+- **Système de panier** pour utilisateurs connectés et invités
+- **Processus de commande** simplifié
+- **Tableau de bord client** pour suivre les commandes
+- **Interface responsive** et moderne
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👨‍💼 Espace Vendeur
+- **Gestion des produits** (CRUD complet)
+- **Upload d'images** et de vidéos
+- **Gestion des stocks** et des prix
+- **Statistiques** et rapports de vente
+- **Interface d'administration** dédiée
 
-## Learning Laravel
+### 🔧 Administration
+- **Gestion des utilisateurs** (clients et vendeurs)
+- **Suivi des commandes** en temps réel
+- **Gestion des catégories** et marques
+- **Tableau de bord** avec métriques
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 💳 Système de Paiement
+- **Intégration FedaPay** (Flooz/TMoney)
+- **Gestion des transactions** sécurisée
+- **Statuts de commande** automatisés
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Technologies Utilisées
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Backend** : Laravel 12, PHP 8.2+
+- **Frontend** : Blade, Bootstrap 5, JavaScript
+- **Base de données** : MySQL
+- **Serveur** : XAMPP/Apache
+- **Gestion des images** : Intervention Image
 
-## Laravel Sponsors
+## 📦 Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Prérequis
+- PHP 8.2 ou supérieur
+- Composer
+- MySQL
+- Node.js et NPM
 
-### Premium Partners
+### Étapes d'installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Cloner le repository**
+   ```bash
+   git clone [URL_DU_REPO]
+   cd IDSeMarket
+   ```
 
-## Contributing
+2. **Installer les dépendances PHP**
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Installer les dépendances Node.js**
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+4. **Configurer l'environnement**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Configurer la base de données**
+   - Créer une base de données MySQL
+   - Mettre à jour les informations de connexion dans `.env`
+   - Exécuter les migrations : `php artisan migrate`
 
-## Security Vulnerabilities
+6. **Compiler les assets**
+   ```bash
+   npm run build
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Démarrer le serveur**
+   ```bash
+   php artisan serve
+   ```
 
-## License
+## 🔐 Configuration
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Variables d'environnement importantes
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=idse_market
+DB_USERNAME=root
+DB_PASSWORD=
+
+FEDAPAY_PUBLIC_KEY=your_public_key
+FEDAPAY_SECRET_KEY=your_secret_key
+FEDAPAY_ENVIRONMENT=sandbox
+```
+
+## 📁 Structure du Projet
+
+```
+IDSeMarket/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Contrôleurs admin
+│   │   ├── Front/          # Contrôleurs front-end
+│   │   └── Vendor/         # Contrôleurs vendeurs
+│   ├── Models/             # Modèles Eloquent
+│   └── Http/Requests/      # Validation des formulaires
+├── resources/views/
+│   ├── admin/              # Vues administration
+│   ├── front/              # Vues front-end
+│   └── vendor/             # Vues vendeurs
+├── database/
+│   ├── migrations/         # Migrations de base de données
+│   └── seeders/            # Seeders pour les données de test
+└── public/
+    └── front/              # Assets front-end (CSS, JS, images)
+```
+
+## 🎯 Utilisation
+
+### Créer un compte vendeur
+1. S'inscrire avec le rôle "Vendeur"
+2. Accéder au tableau de bord vendeur
+3. Ajouter des produits avec images et descriptions
+
+### Passer une commande
+1. Parcourir le catalogue de produits
+2. Ajouter au panier
+3. Procéder au checkout
+4. Choisir le mode de paiement
+5. Confirmer la commande
+
+## 🤝 Contribution
+
+Ce projet est développé dans le cadre d'un stage de deuxième année à l'Institut IAI.
+
+## 📄 Licence
+
+Projet académique - Tous droits réservés.
+
+## 👨‍💻 Développeur
+
+- **Étudiant** : Stage de deuxième année
+- **Institution** : Institut IAI
+- **Technologies** : Laravel, PHP, MySQL, Bootstrap
+
+---
+
+*Dernière mise à jour : Août 2025*
