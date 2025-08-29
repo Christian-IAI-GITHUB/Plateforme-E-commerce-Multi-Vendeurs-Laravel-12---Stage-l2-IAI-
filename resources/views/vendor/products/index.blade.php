@@ -144,7 +144,7 @@
                                                             
                                                             <!-- Formulaire de suppression caché -->
                                                             <form id="delete-form-{{ $product->id }}" 
-                                                                  action="{{ route('vendor.products.destroy', $product->id) }}" 
+                                                                  action="{{ route('vendor.products.destroy', $product) }}" 
                                                                   method="POST" style="display: none;">
                                                                 @csrf
                                                                 @method('DELETE')
