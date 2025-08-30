@@ -19,7 +19,7 @@ class AdminsTableSeeder extends Seeder
         $admin = new Admin;
         $admin->name = 'Amit Gupta';
         $admin->role = 'admin';
-        $admin->mobile = '9800000000';
+        $admin->mobile = '0022892331390';
         $admin->email = 'admin@admin.com';
         $admin->password = $password;
         $admin->status = 1;
@@ -29,7 +29,7 @@ class AdminsTableSeeder extends Seeder
         $admin = new Admin;
         $admin->name = 'SOBAKIN Ekpe Christian';
         $admin->role = 'admin';
-        $admin->mobile = '9800000001';
+        $admin->mobile = '0022892331391';
         $admin->email = 'christ@christ.com';
         $admin->password = $password;
         $admin->status = 1;
@@ -38,7 +38,7 @@ class AdminsTableSeeder extends Seeder
         $admin = new Admin;
         $admin->name = 'SOBAKIN Ekpe Christian';
         $admin->role = 'admin';
-        $admin->mobile = '9800000001';
+        $admin->mobile = '0022892331392';
         $admin->email = 'christ2@christ2.com';
         $admin->password = $password;
         $admin->status = 0;
@@ -47,7 +47,7 @@ class AdminsTableSeeder extends Seeder
         $admin = new Admin;
         $admin->name = 'Steve';
         $admin->role = 'subadmin';
-        $admin->mobile = '9700000000';
+        $admin->mobile = '0022892331393';
         $admin->email = 'steve@admin.com';
         $admin->password = $password;
         $admin->status = 1;
@@ -56,7 +56,7 @@ class AdminsTableSeeder extends Seeder
         $admin = new Admin;
         $admin->name = 'John';
         $admin->role = 'subadmin';
-        $admin->mobile = '9600000000';
+        $admin->mobile = '0022892331394';
         $admin->email = 'john@admin.com';
         $admin->password = $password;
         $admin->status = 1;

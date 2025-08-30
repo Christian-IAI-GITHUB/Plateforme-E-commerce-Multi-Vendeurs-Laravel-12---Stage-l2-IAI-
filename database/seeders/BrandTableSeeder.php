@@ -15,11 +15,16 @@ class BrandTableSeeder extends Seeder
     public function run(): void
     {
         $brands = [
-            ['name'=>'Arrow', 'url'=>'arrow'],
-            ['name'=>'Gap', 'url'=>'gap'],
-            ['name'=>'Lee', 'url'=>'lee'],
-            ['name'=>'Monte Carlo', 'url'=>'monte-carlo'],
-            ['name'=>'Peter England', 'url'=>'peter-england'],
+            ['name'=>'Lacoste', 'url'=>'lacoste'],
+            ['name'=>'Nike', 'url'=>'nike'],
+            ['name'=>'Adidas', 'url'=>'adidas'],
+            ['name'=>'Zara', 'url'=>'zara'],
+            ['name'=>'H&M', 'url'=>'h-m'],
+            ['name'=>'Uniqlo', 'url'=>'uniqlo'],
+            ['name'=>'Levi\'s', 'url'=>'levis'],
+            ['name'=>'Puma', 'url'=>'puma'],
+            ['name'=>'Converse', 'url'=>'converse'],
+            ['name'=>'Vans', 'url'=>'vans'],
         ];
 
         foreach ($brands as $data) {

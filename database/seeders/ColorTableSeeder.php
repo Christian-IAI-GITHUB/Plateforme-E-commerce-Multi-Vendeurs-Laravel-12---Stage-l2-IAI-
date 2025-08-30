@@ -13,7 +13,7 @@ class ColorTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $colors = ['Black', 'Blue', 'Brown', 'Green', 'Grey', 'Multi', 'Olive', 'Orange', 'Pink', 'Purple', 'Red', 'White', 'Yellow'];
+        $colors = ['Noir', 'Bleu', 'Marron', 'Vert', 'Gris', 'Multicolore', 'Olive', 'Orange', 'Rose', 'Violet', 'Rouge', 'Blanc', 'Jaune'];
         foreach ($colors as $colorName) {
             $color = new Color;
             $color->name = $colorName;

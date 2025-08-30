@@ -9,13 +9,13 @@ class CategoryTableSeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ['parent_id' => null, 'name' => 'Clothing', 'url' => 'clothing'],
-            ['parent_id' => null, 'name' => 'Electronics', 'url' => 'electronics'],
-            ['parent_id' => null, 'name' => 'Appliances', 'url' => 'appliances'],
-            ['parent_id' => 1, 'name' => 'Men', 'url' => 'men'],
-            ['parent_id' => 1, 'name' => 'Women', 'url' => 'women'],
-            ['parent_id' => 1, 'name' => 'Kids', 'url' => 'kids'],
-            ['parent_id' => 4, 'name' => 'Men T-Shirts', 'url' => 'men-t-shirts'],
+            ['parent_id' => null, 'name' => 'Vêtements', 'url' => 'vetements'],
+            ['parent_id' => null, 'name' => 'Électronique', 'url' => 'electronique'],
+            ['parent_id' => null, 'name' => 'Électroménager', 'url' => 'electromenager'],
+            ['parent_id' => 1, 'name' => 'Hommes', 'url' => 'hommes'],
+            ['parent_id' => 1, 'name' => 'Femmes', 'url' => 'femmes'],
+            ['parent_id' => 1, 'name' => 'Enfants', 'url' => 'enfants'],
+            ['parent_id' => 4, 'name' => 'T-Shirts Hommes', 'url' => 't-shirts-hommes'],
         ];
         
         foreach ($categories as $data) {
