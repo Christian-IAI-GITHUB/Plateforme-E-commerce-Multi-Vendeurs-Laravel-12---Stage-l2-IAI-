@@ -38,6 +38,16 @@
         <div class="small text-muted">Accueil  -  Mon Compte</div>
       </div>
 
+      @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <i class="fa fa-check-circle mr-2"></i>
+          {{ session('success') }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      @endif
+
       <div class="row mb-4">
         <div class="col-md-3 mb-3">
           <div class="stat-card h-100">
@@ -127,19 +137,77 @@
 
 @push('styles')
 <style>
-.stat-card{border:1px solid #e9ecef;border-radius:.25rem;padding:12px 12px 10px 12px;position:relative;background:#fff}
-.stat-icon{width:36px;height:36px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
-.stat-label{font-size:.82rem;color:#6c757d}
-.stat-value{font-weight:600;font-size:1.25rem}
-.list-group-item{border:0;border-bottom:1px solid #f1f1f1}
-.order-thumb{width:28px;height:28px;object-fit:cover;border-radius:4px;border:1px solid #eee}
-.orders-table th, .orders-table td{padding-top:14px;padding-bottom:14px}
-.orders-table th:nth-child(1){width:10%}
-.orders-table th:nth-child(2){width:16%}
-.orders-table th:nth-child(3){width:44%}
-.orders-table th:nth-child(4){width:15%}
-.orders-table th:nth-child(5){width:10%}
-.orders-table th:nth-child(6){width:5%}
+.stat-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+.stat-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212529;
+}
+.orders-table th {
+  background: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+}
+.order-product {
+  border-bottom: 1px solid #f8f9fa;
+  padding-bottom: 0.5rem;
+}
+.order-product:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.order-thumb {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Style personnalisé pour le message de succès */
+.alert-success {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+  border-left: 4px solid #28a745;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+}
+
+.alert-success .fa-check-circle {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+.alert-success .close {
+  color: #28a745;
+  opacity: 0.7;
+}
+
+.alert-success .close:hover {
+  opacity: 1;
+}
 </style>
 @endpush
 

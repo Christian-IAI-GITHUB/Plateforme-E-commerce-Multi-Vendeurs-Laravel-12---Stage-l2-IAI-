@@ -89,7 +89,10 @@ class CheckoutController extends Controller
 
         // Vider le panier et rediriger vers le tableau de bord (commande marquée comme payée)
         CartItem::where('user_id', Auth::id())->orWhere('session_id', $this->currentSessionId())->delete();
-        return redirect()->route('dashboard');
+        
+        // Ajouter un message de succès
+        return redirect()->route('dashboard')
+            ->with('success', '🎉 Félicitations ! Votre commande #' . $order->id . ' a été validée avec succès. Cliquez sur le bouton "Voir" ci-dessous pour voir la confirmation complète de votre commande.');
     }
 
     public function show($orderId)
