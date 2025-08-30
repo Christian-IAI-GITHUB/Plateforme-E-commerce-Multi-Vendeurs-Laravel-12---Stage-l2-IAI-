@@ -292,7 +292,15 @@ document.addEventListener('click', async (e)=>{
         const qtyEl = document.getElementById('detail-qty');
         const q = qtyEl ? parseInt(qtyEl.value,10) || 1 : 1;
         const res = await fetch('{{ route('cart.add') }}', {method:'POST', headers:{'X-CSRF-TOKEN':'{{ csrf_token() }}','Content-Type':'application/json'}, body: JSON.stringify({product_id:id, quantity:q})});
-        if(res.ok){ if(window.refreshCartCount){ refreshCartCount(); } }
+        if(res.ok){ 
+            const data = await res.json();
+            if(window.refreshCartCount){ refreshCartCount(); }
+            
+            // Afficher le message de succès
+            if(data.message) {
+                showCartSuccessMessage(data.message);
+            }
+        }
     }
 });
 </script>

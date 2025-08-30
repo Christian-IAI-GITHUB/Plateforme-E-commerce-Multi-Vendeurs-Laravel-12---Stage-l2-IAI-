@@ -20,6 +20,11 @@
 <body>
    @include('front.layout.header')
 
+   <!-- Message de succès pour l'ajout au panier -->
+   <div id="cart-success-message" class="alert alert-success" style="display: none; position: fixed; top: 100px; right: 20px; z-index: 9999; min-width: 300px;">
+       <i class="fa fa-check-circle mr-2"></i>
+       <span id="cart-success-text"></span>
+   </div>
 
    @yield('content')
 
@@ -28,6 +33,22 @@
    @include('front.layout.scripts')
 
    @stack('scripts')
+
+   <!-- Script pour le message de succès du panier -->
+   <script>
+   function showCartSuccessMessage(message) {
+       const successDiv = document.getElementById('cart-success-message');
+       const messageText = document.getElementById('cart-success-text');
+       
+       messageText.textContent = message;
+       successDiv.style.display = 'block';
+       
+       // Faire disparaître le message après 3 secondes
+       setTimeout(() => {
+           successDiv.style.display = 'none';
+       }, 3000);
+   }
+   </script>
 
 </body>
 

@@ -61,7 +61,11 @@ class CartController extends Controller
         $item->total_price = $item->quantity * $item->unit_price;
         $item->save();
 
-        return response()->json(['ok' => true]);
+        return response()->json([
+            'success' => true,
+            'message' => 'Produit ajouté au panier avec succès !',
+            'product_name' => $product->product_name
+        ]);
     }
 
     public function update(Request $request)

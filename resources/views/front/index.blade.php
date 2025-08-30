@@ -334,9 +334,15 @@ document.addEventListener('click', async (e)=>{
         const id = e.target.dataset.id;
         const res = await fetch('{{ route('cart.add') }}', {method:'POST', headers:{'X-CSRF-TOKEN':'{{ csrf_token() }}','Content-Type':'application/json'}, body: JSON.stringify({product_id:id, quantity:1})});
         if(res.ok){
+            const data = await res.json();
             if(window.refreshCartCount){ refreshCartCount(); }
             e.target.textContent = 'Ajouté';
             setTimeout(()=>{ e.target.textContent = 'Ajouter au panier'; }, 1000);
+            
+            // Afficher le message de succès
+            if(data.message) {
+                showCartSuccessMessage(data.message);
+            }
         }
     }
 });

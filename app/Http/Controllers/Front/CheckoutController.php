@@ -25,6 +25,12 @@ class CheckoutController extends Controller
 
     public function form(Request $request)
     {
+        // Vérifier si l'utilisateur est connecté
+        if (!Auth::check()) {
+            return redirect()->route('login')
+                ->with('error', 'Vous devez être connecté pour accéder au checkout. Veuillez vous connecter ou créer un compte.');
+        }
+
         $items = CartItem::with('product')
             ->when(Auth::check(), fn($q)=>$q->where('user_id', Auth::id()))
             ->when(!Auth::check(), fn($q)=>$q->where('session_id', $this->currentSessionId()))
@@ -38,6 +44,12 @@ class CheckoutController extends Controller
 
     public function place(Request $request)
     {
+        // Vérifier si l'utilisateur est connecté
+        if (!Auth::check()) {
+            return redirect()->route('login')
+                ->with('error', 'Vous devez être connecté pour passer une commande. Veuillez vous connecter ou créer un compte.');
+        }
+
         $validated = $request->validate([
             'customer_name' => 'required|string|max:255',
             'phone_number' => 'required|string|max:30',

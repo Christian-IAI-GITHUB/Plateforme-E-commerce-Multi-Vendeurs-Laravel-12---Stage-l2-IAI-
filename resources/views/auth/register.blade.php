@@ -19,6 +19,18 @@
 					<div class="card-body p-4">
 						<h4 class="font-weight-semi-bold mb-4">Créer un compte</h4>
 
+						@if (session('status'))
+							<div class="alert alert-success" role="alert">
+								{{ session('status') }}
+							</div>
+						@endif
+
+						@if (session('error'))
+							<div class="alert alert-danger" role="alert">
+								{{ session('error') }}
+							</div>
+						@endif
+
 						@if ($errors->any())
 							<div class="alert alert-danger">
 								<ul class="mb-0">
